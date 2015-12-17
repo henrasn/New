@@ -27,9 +27,11 @@ public class MainActivity extends AppCompatActivity {
         model=new Model("nugraha","10111353");
         data.add(model);
 
-        recyclerView=(RecyclerView)findViewById(R.id.recycler);
+        recyclerView=(RecyclerView)findViewById(R.id.in_app_friends);
         layoutManager=new Custom(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
         MyRecyclerView adapter=new MyRecyclerView(data);
+
+        RecyclerView.LayoutManager manager=new Custom(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
